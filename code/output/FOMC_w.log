@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/alhu/Downloads/bitcoin/code/stata/prices_study/output/FOMC_w.log
+  log type:  text
+ opened on:  14 Aug 2017, 23:11:40
+. 
+. ***
+. *** Bitcoin and Litecoin and the principle components experience a negative pre FOMC announcement drift
+. *** Effect not present for other cryptocurrencies
+. regress ex_btc i.fomc, robust
+
+Linear regression                                      Number of obs =     126
+                                                       F(  1,   124) =    0.25
+                                                       Prob > F      =  0.6169
+                                                       R-squared     =  0.0026
+                                                       Root MSE      =  .21083
+
+------------------------------------------------------------------------------
+             |               Robust
+      ex_btc |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      1.fomc |  -.0332366   .0662801    -0.50   0.617    -.1644234    .0979502
+       _cons |   .0319706   .0195265     1.64   0.104    -.0066778    .0706189
+------------------------------------------------------------------------------
+. regress ex_ltc i.fomc, robust
+
+Linear regression                                      Number of obs =     104
+                                                       F(  1,   102) =    0.93
+                                                       Prob > F      =  0.3374
+                                                       R-squared     =  0.0087
+                                                       Root MSE      =  .40353
+
+------------------------------------------------------------------------------
+             |               Robust
+      ex_ltc |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      1.fomc |   -.113181   .1174317    -0.96   0.337    -.3461062    .1197443
+       _cons |    .054415   .0424306     1.28   0.203     -.029746     .138576
+------------------------------------------------------------------------------
+. log close
+      name:  <unnamed>
+       log:  /Users/alhu/Downloads/bitcoin/code/stata/prices_study/output/FOMC_w.log
+  log type:  text
+ closed on:  14 Aug 2017, 23:11:40
+--------------------------------------------------------------------------------------------------------------

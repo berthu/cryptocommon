@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/alhu/Dropbox/research/bitcoin/code/stata/prices_study/output/BTCLTCSharpe.log
+  log type:  text
+ opened on:  29 Sep 2016, 12:20:59
+. *** for calculation of Sharpe ratios
+. sum ex_btc if fomc == 1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ex_btc |        34   -.0172975    .0669194  -.2619177   .1235947
+. sum ex_ltc if fomc == 1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ex_ltc |        27   -.0445324    .1121862  -.4936716   .0562253
+. log close
+      name:  <unnamed>
+       log:  /Users/alhu/Dropbox/research/bitcoin/code/stata/prices_study/output/BTCLTCSharpe.log
+  log type:  text
+ closed on:  29 Sep 2016, 12:20:59
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
